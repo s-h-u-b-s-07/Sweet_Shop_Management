@@ -4,7 +4,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class SweetStore {
+    private static SweetStore instance;
     private Set<Sweet> sweetList = new HashSet<>();
+
+    private SweetStore() {
+
+    }
+
+    public static SweetStore getInstance() {
+        if(instance==null) {
+            instance=new SweetStore();
+        }
+        return instance;
+    }
 
     public void add(Sweet sweet) {
         sweetList.add(sweet);

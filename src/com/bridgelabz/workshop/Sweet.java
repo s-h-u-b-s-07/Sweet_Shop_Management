@@ -63,11 +63,9 @@ public class Sweet {
         return true;
     }
 
+    @Override
     public String toString() {
-
-        return getClass().getSimpleName() + "-> [Shape=" + shape + ",color=" + color + ",Price=" + price + "]";
-
+        return "Sweet [name=" + name + ", color=" + color + ", shape=" + shape + ", price=" + price + ", ingredients="
+                + ingredients + "]";
     }
-
-
 }
